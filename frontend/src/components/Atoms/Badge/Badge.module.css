@@ -1,0 +1,40 @@
+/* Dar uma olhada se os tons estão certos */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: var(--font-family-base);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Qualis A  ── */
+.qualisA {
+  background-color: #dcfce7;
+  color: #14532d;
+}
+
+/* ── Qualis B  ── */
+.qualisB {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+/* ── Qualis C  ── */
+.qualisC {
+  background-color: #fef9c3;
+  color: #713f12;
+}
+
+/* ── Neutral (Gratuita, Paga )  ── */
+.neutral {
+  background-color: #f1f5f9;
+  color: #334155;
+}

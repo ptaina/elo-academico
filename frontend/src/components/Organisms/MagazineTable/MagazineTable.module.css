@@ -1,0 +1,121 @@
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #f0f2f5;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.th {
+  text-align: left;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f0f2f5;
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+}
+
+.tr { transition: background-color 0.12s ease; }
+.tr:not(:last-child) { border-bottom: 1px solid #f8fafc; }
+.tr:hover { background-color: #fafbfc; }
+
+.td {
+  padding: 0.9375rem 1.25rem;
+  vertical-align: middle;
+  font-family: var(--font-family-base);
+}
+
+.magazineName { font-size: 0.875rem; font-weight: 600; color: #0A2540; }
+.cellText     { font-size: 0.875rem; color: #374151; }
+.cellMuted    { font-size: 0.8125rem; color: #64748b; }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* aumentei pq tava muito pouco espaço*/
+}
+
+/* Estilo para o botão de Detalhes  */
+.linkDetails {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #6b7280 !important; /* Cinza suave */
+  box-shadow: none !important;
+  height: auto !important;
+  font-weight: 500;
+}
+.linkDetails:hover {
+  color: #111827 !important; /* Fica mais escuro ao passar o mouse */
+  text-decoration: underline;
+  background: transparent !important;
+}
+
+/* Estilo para o botão de Excluir (Texto Vermelho) */
+.linkDelete {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #ef4444 !important; /* Vermelho padrão */
+  box-shadow: none !important;
+  height: auto !important;
+  font-weight: 500;
+}
+.linkDelete:hover {
+  color: #b91c1c !important; /* Vermelho mais escuro no hover */
+  text-decoration: underline;
+  background: transparent !important; }
+
+  @media (max-width: 768px) {
+  /* Card com fundo branco, cantos suaves e sombra leve */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: var(--spacing-4, 1rem) var(--spacing-4, 1rem);
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.06),
+      0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f2f5;
+    gap: var(--spacing-2, 0.5rem);
+    /* Remove o hover de elevação — em touch não faz sentido */
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.06),
+      0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Primeira linha: nome da revista à esquerda, badge Qualis à direita */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-3, 0.75rem);
+  }
+
+  .nome {
+    font-size: 0.9375rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Área do periódico */
+  .area {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+}

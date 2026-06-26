@@ -1,0 +1,93 @@
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #f0f2f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  text-align: left;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f0f2f5;
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+}
+
+.tr {
+  transition: background-color 0.12s ease;
+}
+
+.tr:not(:last-child) {
+  border-bottom: 1px solid #f8fafc;
+}
+
+.tr:hover {
+  background-color: #fafbfc;
+}
+
+.td {
+  padding: 1rem 1.25rem;
+  vertical-align: middle;
+  font-family: var(--font-family-base);
+}
+
+.categoryName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0A2540;
+}
+
+.categoryDescription {
+  font-size: 0.875rem;
+  color: #64748b;
+  max-width: 480px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Overrides the Button atom to appear as a destructive text link */
+.linkDelete :global(button) {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #ef4444 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  min-height: unset !important;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.linkDelete :global(button:hover) {
+  opacity: 1;
+  background: none !important;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2.5rem 1.25rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-family: var(--font-family-base);
+}

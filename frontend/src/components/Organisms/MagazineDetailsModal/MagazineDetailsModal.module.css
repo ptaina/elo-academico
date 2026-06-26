@@ -1,0 +1,81 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fieldLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #94a3b8;
+  font-family: var(--font-family-base);
+}
+
+.fieldValue {
+  font-size: 0.9375rem;
+  color: #0A2540;
+  font-weight: 500;
+  font-family: var(--font-family-base);
+}
+
+.fieldDescription {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  font-family: var(--font-family-base);
+}
+
+.fieldLink {
+  font-size: 0.875rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-family: var(--font-family-base);
+  transition: opacity 0.15s ease;
+}
+
+.fieldLink:hover {
+  opacity: 0.75;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  font-family: var(--font-family-base);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.editBtn:hover {
+  color: #0A2540;
+}

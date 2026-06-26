@@ -1,0 +1,63 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.title { font-size: 1.75rem; font-weight: 700; color: #0A2540; margin: 0; }
+.subtitle { color: #64748b; margin: 0.25rem 0 0; font-size: 0.925rem; }
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0;
+}
+.tab {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab:hover { color: #0A2540; }
+.tabActive { color: #0A2540 !important; border-bottom-color: #0A2540 !important; }
+.tabCount { font-size: 0.75rem; color: #94a3b8; }
+.listSection { display: flex; flex-direction: column; gap: 1rem; }
+.empty { color: #64748b; text-align: center; padding: 3rem 0; font-size: 0.925rem; }
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.cardHeader { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.cardTitle { font-size: 1rem; font-weight: 600; color: #0A2540; margin: 0; }
+.cardMeta { font-size: 0.8rem; color: #64748b; margin: 0.2rem 0 0; }
+.rejectionBox {
+  background: #fff5f5;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #dc2626;
+}
+.link { font-size: 0.85rem; color: #0A2540; text-decoration: none; font-weight: 500; }
+.link:hover { text-decoration: underline; }

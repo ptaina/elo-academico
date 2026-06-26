@@ -1,0 +1,80 @@
+.page {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #0A2540;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.name { font-size: 1.25rem; font-weight: 700; color: #0A2540; margin: 0; }
+.role { font-size: 0.85rem; color: #64748b; margin: 0.15rem 0 0; }
+.tabs { display: flex; gap: 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 1.5rem; }
+.tab {
+  padding: 0.6rem 1.25rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab:hover { color: #0A2540; }
+.tabActive { color: #0A2540 !important; border-bottom-color: #0A2540 !important; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.note { font-size: 0.8rem; color: #94a3b8; margin: 0; }
+.actions { margin-top: 0.5rem; }
+.success { color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.875rem; margin-bottom: 1rem; }
+.error   { color: #dc2626; background: #fef2f2; border: 1px solid #fecaca;  border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.875rem; margin-bottom: 1rem; }
+.danger { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #fee2e2; }
+.dangerTitle { font-size: 0.95rem; font-weight: 600; color: #dc2626; margin: 0 0 0.25rem; }
+.dangerText  { font-size: 0.85rem; color: #64748b; margin: 0 0 0.75rem; }
+
+@media (max-width: 480px) {
+  .row { grid-template-columns: 1fr; }
+  .card { padding: 1.25rem; }
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+}
+.backBtn:hover { color: #0A2540; }
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

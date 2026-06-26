@@ -1,0 +1,12 @@
+# Variáveis de ambiente
+**/.env
+**/.env.test
+
+# Dependências
+**/node_modules/
+
+# Build
+**/dist/
+
+# Logs
+**/logs/

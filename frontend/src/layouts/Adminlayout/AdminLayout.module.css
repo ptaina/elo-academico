@@ -1,0 +1,29 @@
+.adminContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.mainContent {
+  flex: 1; /* direita ocupa todo o espaço que sobrar */
+  padding: var(--spacing-8);
+  overflow-y: auto; /* se for grande, a rolagem fica só aqui */
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: var(--spacing-6, 1.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .adminContainer {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding: var(--spacing-4, 1rem);
+    width: 100%;
+    min-width: 0;
+  }
+}

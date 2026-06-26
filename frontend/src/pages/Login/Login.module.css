@@ -1,0 +1,272 @@
+.container {
+  display: flex;
+  min-height: 100dvh;
+  font-family: var(--font-family-base);
+}
+
+.leftPanel {
+  flex: 1;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8, 2rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.leftPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92'%3E%3Cpolygon points='40,2 78,22 78,70 40,90 2,70 2,22' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: auto, auto, 80px 92px;
+  pointer-events: none;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 360px;
+}
+
+.brandName {
+  font-family: var(--font-family-base);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 var(--spacing-3, 0.75rem);
+  letter-spacing: -0.02em;
+}
+
+.brandSubtitle {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: var(--color-bg, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8, 2rem);
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4, 1rem);
+}
+
+.formHeader {
+  margin-bottom: var(--spacing-2, 0.5rem);
+}
+
+.formTitle {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-1, 0.25rem);
+  letter-spacing: -0.02em;
+}
+
+.formSubtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4, 1rem);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1, 0.25rem);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.rememberRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2, 0.5rem);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkboxText {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  user-select: none;
+}
+
+.forgotLink {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.forgotLink:hover {
+  color: var(--color-primary);
+}
+
+.createAccountText {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-2, 0.5rem) 0 0;
+}
+
+.createAccountLink {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.createAccountLink:hover {
+  opacity: 0.8;
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-top: var(--spacing-1, 0.25rem);
+  transition: color 0.15s ease;
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .leftPanel {
+    padding: var(--spacing-6, 1.5rem);
+  }
+
+  .rightPanel {
+    padding: var(--spacing-6, 1.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    background-color: #f3f4f6;
+    min-height: 100dvh;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    flex: 1;
+    background-color: #f3f4f6;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+  }
+
+  .formWrapper {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.05),
+      0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .formTitle {
+    font-size: 1.375rem;
+  }
+
+  .form input,
+  .form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .rememberRow {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+
+  .forgotLink {
+    white-space: nowrap;
+    font-size: 0.8125rem;
+  }
+
+  .checkboxLabel {
+    gap: 0.5rem;
+    min-width: max-content;
+    flex-shrink: 0;
+  }
+
+  .checkbox {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkboxText {
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+}
+.error { color: #dc2626; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.75rem; font-size: 0.875rem; margin-bottom: 1rem; }
+.forgotLink { font-size: 0.8rem; color: #64748b; text-decoration: none; align-self: flex-end; margin-top: -0.5rem; }
+.forgotLink:hover { text-decoration: underline; }
+.submitButton { margin-top: 0.5rem; }
+.footerLink { color: #0A2540; font-weight: 600; text-decoration: none; }
+.footerLink:hover { text-decoration: underline; }
+.backHome { display: block; margin-top: 0.75rem; font-size: 0.85rem; color: #64748b; text-decoration: none; }
+.backHome:hover { text-decoration: underline; }
+
+.logoTitle { font-size: 2rem; font-weight: 700; color: #fff; margin: 0 0 0.5rem; }
+.logoSubtitle { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0; }
+.formFooter { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-top: 0.5rem; }
+.loginRedirect { font-size: 0.875rem; color: #64748b; margin: 0; }
+.footerLinkBold { color: #0A2540; font-weight: 600; text-decoration: none; }
+.footerLinkBold:hover { text-decoration: underline; }
+.backHomeLink { font-size: 0.8rem; color: #94a3b8; text-decoration: none; }
+.backHomeLink:hover { color: #0A2540; }

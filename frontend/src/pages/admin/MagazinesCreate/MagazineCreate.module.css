@@ -1,0 +1,13 @@
+.container { padding: 1.5rem; max-width: 700px; }
+.back { background: none; border: none; color: #64748b; cursor: pointer; font-size: 0.875rem; margin-bottom: 1rem; display: block; padding: 0; }
+.back:hover { color: #0A2540; }
+.title { font-size: 1.5rem; font-weight: 700; color: #0A2540; margin: 0 0 1.5rem; }
+.form { display: flex; flex-direction: column; gap: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field { display: flex; flex-direction: column; gap: 0.35rem; }
+.label { font-size: 0.875rem; font-weight: 500; color: #374151; }
+.select, .textarea { border: 1px solid #d1d5db; border-radius: 8px; padding: 0.6rem 0.875rem; font-size: 0.875rem; font-family: inherit; background: #fff; transition: border-color 0.15s; }
+.select:focus, .textarea:focus { outline: none; border-color: #0A2540; }
+.textarea { resize: vertical; }
+.error { color: #dc2626; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.75rem; font-size: 0.875rem; margin-bottom: 1rem; }
+@media (max-width: 480px) { .row { grid-template-columns: 1fr; } }

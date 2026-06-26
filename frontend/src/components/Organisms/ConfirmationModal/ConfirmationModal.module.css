@@ -1,0 +1,181 @@
+
+
+/* -- Tokens locais (sobrescreva com as vars do seu Design System) -- */
+.container {
+  --clr-text-primary:   #111318;
+  --clr-text-secondary: #5c6070;
+  --clr-border:         #e8e9ed;
+  --clr-surface:        #ffffff;
+
+  /* Vermelho gostou do vermelho elegante? como Taylor diria MAROON  */
+  --clr-danger-bg:      #c0392b;        /* fundo do botão confirm */
+  --clr-danger-bg-hov:  #a93226;        
+  --clr-danger-ring:    rgba(192, 57, 43, 0.28);
+
+  /* aviso */
+  --clr-icon-stroke:    #c0392b;
+  --clr-icon-fill:      rgba(192, 57, 43, 0.08);
+
+  /* cancelou */
+  --clr-ghost-text:     #5c6070;
+  --clr-ghost-text-hov: #111318;
+  --clr-ghost-bg-hov:   #f3f4f6;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2.25rem 2.25rem 1.75rem;
+  min-width: 22rem;
+  max-width: 26rem;
+  background: var(--clr-surface);
+  border-radius: 14px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 10px 30px -8px rgba(0, 0, 0, 0.12);
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--clr-icon-fill);
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  stroke: var(--clr-icon-stroke);
+  fill: none;
+}
+
+.header {
+  margin-bottom: 0.625rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.0625rem;    /* ~17 px */
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  color: var(--clr-text-primary);
+}
+
+/* ── Corpão violão*/
+.body {
+  margin-bottom: 1.875rem;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.875rem;     /* 14 px */
+  line-height: 1.65;
+  color: var(--clr-text-secondary);
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--clr-border);
+}
+
+/* Botão Ghost */
+.footer :global([data-variant="ghost"]),
+.footer :global(.btn-ghost) {
+  background: transparent;
+  border: none;
+  color: var(--clr-ghost-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.footer :global([data-variant="ghost"]):hover:not(:disabled),
+.footer :global(.btn-ghost):hover:not(:disabled) {
+  background: var(--clr-ghost-bg-hov);
+  color: var(--clr-ghost-text-hov);
+}
+
+.footer :global([data-variant="ghost"]):disabled,
+.footer :global(.btn-ghost):disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/*Botão de destruição buuuuum*/
+.footer :global([data-variant="danger"]),
+.footer :global(.btn-danger) {
+  background: var(--clr-danger-bg);
+  color: #fff;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  padding: 0.5rem 1.125rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    box-shadow 150ms ease,
+    transform 80ms ease;
+}
+
+.footer :global([data-variant="danger"]):hover:not(:disabled),
+.footer :global(.btn-danger):hover:not(:disabled) {
+  background: var(--clr-danger-bg-hov);
+  box-shadow: 0 0 0 3px var(--clr-danger-ring);
+}
+
+.footer :global([data-variant="danger"]):active:not(:disabled),
+.footer :global(.btn-danger):active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.footer :global([data-variant="danger"]):focus-visible,
+.footer :global(.btn-danger):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--clr-danger-ring);
+}
+
+.footer :global([data-variant="danger"]):disabled,
+.footer :global(.btn-danger):disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.75rem 1.5rem 1.375rem;
+    min-width: unset;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .footer :global([data-variant="ghost"]),
+  .footer :global(.btn-ghost),
+  .footer :global([data-variant="danger"]),
+  .footer :global(.btn-danger) {
+    width: 100%;
+    justify-content: center;
+    padding-block: 0.65rem;
+  }
+}

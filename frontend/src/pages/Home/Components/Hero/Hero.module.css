@@ -1,0 +1,443 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--spacing-12, 3rem);
+  padding: var(--spacing-16, 4rem) var(--spacing-8, 2rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: calc(100dvh - 72px);
+  font-family: var(--font-family-base);
+}
+
+/*  coluna esquerda do mock */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6, 1.5rem);
+}
+
+.headline {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary, #0f172a);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.headlineAccent {
+  position: relative;
+  display: inline;
+  color: var(--color-primary, #1e3a8a);
+}
+
+.subtext {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary, #64748b);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 540px;
+}
+
+.subtext strong {
+  color: var(--color-text-primary, #0f172a);
+  font-weight: 600;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-5, 1.25rem);
+  flex-wrap: wrap;
+}
+
+.learnMore {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-primary, #0f172a);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.learnMore:hover {
+  opacity: 0.6;
+}
+
+.socialProof {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3, 0.75rem);
+}
+
+.avatarStack {
+  display: flex;
+}
+
+.avatarChip {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-primary, #1e3a8a);
+  color: #ffffff;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  margin-left: -0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.avatarChip:first-child {
+  margin-left: 0;
+}
+
+.socialText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.socialCount {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary, #0f172a);
+}
+
+.socialSub {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary, #64748b);
+}
+
+/*  coluna direita do mock */
+.rightCol {
+  border-radius: var(--radius-xl, 1rem);
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.16), 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.browserChrome {
+  background-color: #1e293b;
+  padding: 0.625rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3, 0.75rem);
+}
+
+.chromeDots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.chromeDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+.chromeBar {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full, 9999px);
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2, 0.5rem);
+}
+
+.chromeGlobe {
+  font-size: 0.625rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.chromeUrl {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-family-base);
+}
+
+/* corpo do mock */
+.mockupBody {
+  background-color: #f8fafc;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+/* pesquisa */
+.mockSearchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.mockSearchIcon {
+  font-size: 0.75rem;
+  opacity: 0.45;
+}
+
+.mockSearchText {
+  flex: 1;
+  font-size: 0.6875rem;
+  color: #475569;
+  font-family: var(--font-family-base);
+}
+
+.mockSearchBtn {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-primary, #1e3a8a);
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+  font-family: var(--font-family-base);
+}
+
+/* Filtro */
+.mockFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.mockFilterChip {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: var(--color-primary, #1e3a8a);
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-full, 9999px);
+  padding: 0.1875rem 0.5rem;
+  font-family: var(--font-family-base);
+}
+
+.mockFilterClear {
+  font-size: 0.5625rem;
+  color: #94a3b8;
+  font-family: var(--font-family-base);
+  margin-left: auto;
+  cursor: default;
+}
+
+/* Resultados  */
+.mockResultsHeader {
+  padding: 0.125rem 0;
+}
+
+.mockResultsCount {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-family-base);
+}
+
+/*  Lista mock  */
+.mockJournalList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mockJournalItem {
+  background-color: #ffffff;
+  border: 1px solid #f0f2f5;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  transition: box-shadow 0.1s ease;
+}
+
+.mockJournalItem:hover {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.mockJournalTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.mockJournalName {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+  font-family: var(--font-family-base);
+  flex: 1;
+}
+
+.mockQualisBadge {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  padding: 0.1875rem 0.4375rem;
+  border-radius: var(--radius-full, 9999px);
+  flex-shrink: 0;
+  font-family: var(--font-family-base);
+}
+
+
+.qualisA1 { background-color: #dcfce7; color: #15803d; }
+.qualisA2 { background-color: #dbeafe; color: #1d4ed8; }
+.qualisA3 { background-color: #ede9fe; color: #6d28d9; }
+.qualisA4 { background-color: #fef9c3; color: #a16207; }
+.qualisB1 { background-color: #ffedd5; color: #c2590a; }
+.qualisB2 { background-color: #fce7f3; color: #be185d; }
+.qualisDefault { background-color: #f1f5f9; color: #475569; }
+
+.mockJournalMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.mockIssnTag,
+.mockAreaTag {
+  font-size: 0.5rem;
+  color: #64748b;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--font-family-base);
+}
+
+.mockApcFree {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #15803d;
+  background-color: #dcfce7;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--font-family-base);
+  margin-left: auto;
+}
+
+.mockApcPaid {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #b45309;
+  background-color: #fef3c7;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--font-family-base);
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: var(--spacing-12, 3rem) var(--spacing-6, 1.5rem);
+    gap: var(--spacing-10, 2.5rem);
+  }
+
+  .rightCol {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.25rem; 
+    gap: 2rem;
+  }
+
+  /* Título compacto */
+  .headline {
+    font-size: 1.75rem;       /*  parou de dominar a tela */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  /* Subtexto menor para respirar */
+  .subtext {
+    font-size: 0.9375rem;    
+    line-height: 1.65;
+    max-width: 100%;          /* ocupa toda a largura disponível */
+  }
+
+  /* CTAs em coluna*/
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;     /* botões esticam até a borda do container */
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  /* Garante que o Button ocupa tudinho */
+  .ctaRow > * {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* "Saiba como funciona" centralizado em coluna */
+  .learnMore {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  /* largura total, sem espremimento */
+  .rightCol {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    /* Reduz sombra pesada no mobile */
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
+  }
+
+  /* URL da barra do browser: n vai vazar */
+  .chromeUrl {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+  }
+
+  /* Padding interno um pouco menor */
+  .mockupBody {
+    padding: 0.75rem;
+  }
+
+  /* Compacta levemente */
+  .socialCount {
+    font-size: 0.8125rem;
+  }
+
+  .socialSub {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ── Mobile pequeno, apenas o necessário ── */
+@media (max-width: 640px) {
+  .headline {
+    font-size: 1.5rem;        /* ~24px para telas < 375px */
+  }
+
+  .hero {
+    padding: 2rem 1rem;       /* 16px lateral em telas muito estreitas */
+  }
+}

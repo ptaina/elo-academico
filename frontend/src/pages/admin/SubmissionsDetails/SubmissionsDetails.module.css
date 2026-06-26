@@ -1,0 +1,18 @@
+.container { padding: 1.5rem; max-width: 760px; }
+.back { background: none; border: none; color: #64748b; cursor: pointer; font-size: 0.875rem; margin-bottom: 1.5rem; display: block; padding: 0; }
+.back:hover { color: #0A2540; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; }
+.cardHeader { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.name { font-size: 1.25rem; font-weight: 700; color: #0A2540; margin: 0; }
+.fields { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+.field { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; font-size: 0.875rem; }
+.label { font-weight: 600; color: #475569; }
+.link { color: #0A2540; word-break: break-all; }
+.link:hover { text-decoration: underline; }
+.rejected { color: #dc2626; }
+.actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.rejectForm { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; }
+.rejectLabel { font-size: 0.875rem; font-weight: 600; color: #334155; }
+.rejectTextarea { border: 1px solid #cbd5e1; border-radius: 8px; padding: 0.75rem; font-size: 0.875rem; font-family: inherit; resize: vertical; }
+.error   { color: #dc2626; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.75rem; font-size: 0.875rem; margin-bottom: 1rem; }
+.success { color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.75rem; font-size: 0.875rem; margin-bottom: 1rem; }

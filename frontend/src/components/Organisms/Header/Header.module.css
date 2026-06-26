@@ -1,0 +1,169 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.headerScrolled {
+  border-bottom-color: #e2e8f0;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  color: #0A2540;
+}
+
+.logoText {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0A2540;
+  letter-spacing: -0.01em;
+}
+
+.logoAccent { color: #0A2540; }
+
+/* Ações */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Botão Sugerir Revista */
+.suggestButton {
+  padding: 0.45rem 1rem;
+  background: none;
+  border: 1.5px solid #0A2540;
+  border-radius: 8px;
+  color: #0A2540;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.suggestButton:hover {
+  background: #0A2540;
+  color: #fff;
+}
+
+/* Botão Ir para o Painel */
+.panelButton {
+  padding: 0.45rem 1rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.panelButton:hover { background: #e2e8f0; }
+
+/* Botão Entrar */
+.buttonPrimary {
+  padding: 0.45rem 1.25rem;
+  background: #0A2540;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.buttonPrimary:hover { opacity: 0.85; }
+
+/* Avatar e usuário */
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0A2540;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+/* Botão Sair */
+.logoutButton {
+  padding: 0.4rem 0.75rem;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.logoutButton:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+@media (max-width: 640px) {
+  .userName    { display: none; }
+  .panelButton { display: none; }
+  .suggestButton { font-size: 0.8rem; padding: 0.4rem 0.75rem; }
+}
+
+.buttonSecondary {
+  padding: 0.45rem 1.25rem;
+  background: none;
+  border: none;
+  color: #0A2540;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.buttonSecondary:hover { opacity: 0.6; }
